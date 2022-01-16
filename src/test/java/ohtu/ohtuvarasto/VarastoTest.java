@@ -98,12 +98,14 @@ public class VarastoTest {
     @Test
     public void ylilisaysTayttaaVaraston() {
         varasto.lisaaVarastoon(15.0);
+        
         assertEquals(10.0, varasto.getSaldo(), vertailuTarkkuus);
     }
     
     @Test
     public void negatiivinenLisaysEiVaikuta() {
         varasto.lisaaVarastoon(-10.0);
+        
         assertEquals(0.0, varasto.getSaldo(), vertailuTarkkuus);
     }
     
